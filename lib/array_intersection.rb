@@ -1,7 +1,8 @@
 # Creates a new array to return the intersection of the two input arrays
 def intersection(a, b)
 
-  #MY SOLUTION
+  # # MY FIRST SOLUTION
+  # # using the truth about sets
   # if a == nil || b == nil
   #   return []
   # end
@@ -20,16 +21,12 @@ def intersection(a, b)
   #   return bintersect
   # end
 
-  #elem2 == elem1 && elem1 != intersect[intersect.length -1]
-
-
   # [21, 34, 42, 70, 78, 90]
-  #RUBY WAY
+  # # RUBY WAY
   # # in ruby, the & is also the intersection
   #  a & b
 
-  # #SHRUTI WAY
-  #
+  # # SHRUTI WAY
   # # using the shorter array, create a hash where the integers are the keys
   # # set the value for the key to true for integers in the array
   #
@@ -64,8 +61,9 @@ def intersection(a, b)
   # return intersect
 
 
-  #Another way: Merge sort / quicksort on longer array
-  #Binary search on longer array to search for elem in common with each elem of shorter array
+  # # Another way: Merge sort / quicksort on longer array
+  # # Binary search on longer array to search for elem in common with each elem of shorter array
+  # # only works if no repeating elem in the shorter array
   return [] if a == nil || b == nil || a.length == 0 || b.length == 0
 
   if a.length <= b.length
@@ -90,7 +88,7 @@ def intersection(a, b)
   return intersect
 end
 
-#helper for sorting / binary way of finding intersection
+#helper for sorting / binary search way of finding intersection
 def sort(array, length)
   length.times do |index| # outer loop - n elements
     min_index = index # assume index is where the next minimally value is
@@ -109,7 +107,7 @@ def sort(array, length)
   end
 end
 
-#helper for sorting / binary way of finding intersection
+#helper for sorting / binary search way of finding intersection
 def binary_search(array, length, value_to_find)
   middle = length / 2
   low = 0
