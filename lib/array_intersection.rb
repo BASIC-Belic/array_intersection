@@ -9,14 +9,13 @@ def intersection(a, b)
     return []
   end
 
-  c = a - b
-
-  aintersect = a - c
-
-  return aintersect
-
-  #similarly:
-  # d = b - a
-  #bintersect = b - d
-  #this should be equal to aintersect
+  if a.length < b.length
+    c = a - b
+    aintersect = a - c
+    return aintersect
+  else
+    d = b - a
+    bintersect = b - d
+    return bintersect
+  end
 end
