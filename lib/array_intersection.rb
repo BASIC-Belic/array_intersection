@@ -21,7 +21,6 @@ def intersection(a, b)
   #   return bintersect
   # end
 
-  # [21, 34, 42, 70, 78, 90]
   # # RUBY WAY
   # # in ruby, the & is also the intersection
   #  a & b
@@ -59,7 +58,6 @@ def intersection(a, b)
   # end
   #
   # return intersect
-
 
   # # Another way: Merge sort / quicksort on longer array
   # # Binary search on longer array to search for elem in common with each elem of shorter array
