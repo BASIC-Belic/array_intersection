@@ -18,4 +18,7 @@ def intersection(a, b)
     bintersect = b - d
     return bintersect
   end
+
+  # # in ruby, the & is also the intersection
+  #  a & b
 end
